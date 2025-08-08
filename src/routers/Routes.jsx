@@ -1,16 +1,11 @@
-import { useRoutes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
-const routes = [
-  {
-    path: "/",
-    element: <MainLayout />,
-    children: [
-      { index: true, element: "" },
-      { path: "", element: "" },
-    ],
-  },
-];
+export default function AppRoutes() {
+  return(
+    <Routes>
+      <Route path="/" element={""} />
+    </Routes>
+  )
+}
 
-export const AppRoutes = () => {
-  return useRoutes(routes);
-};
+

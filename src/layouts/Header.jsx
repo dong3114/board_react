@@ -1,21 +1,31 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+// src/components/MainHeader.jsx
+import { Link, NavLink } from "react-router-dom";
+import "./MainHeader.css";
 
-export default function DefaultHeader() {
+export default function MainHeader() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light px-4">
-      <a className="navbar-brand" href="#">
-        <i className="bi bi-bluesky fs-3"></i>
-      </a>
-      <div className="collapse navbar-collapse justify-content-end">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <a className="nav-link" href="#">글작성</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">F & Q</a>
-          </li>
-        </ul>
+    <header className="header-bar">
+      <div className="header-inner">
+        {/* 왼쪽: 로고 */}
+        <div className="nav-left">
+          <Link to="/" className="logo" aria-label="홈으로 이동">
+            DORAGAZA
+          </Link>
+        </div>
+
+        {/* 오른쪽: 네비게이션 박스 */}
+        <nav className="nav-right" aria-label="Primary">
+          <NavLink to="/posts/new" className="nav-item">
+            글작성
+          </NavLink>
+          <NavLink to="/posts" className="nav-item">
+            글목록
+          </NavLink>
+          <NavLink to="/login" className="nav-item nav-cta">
+            로그인
+          </NavLink>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
