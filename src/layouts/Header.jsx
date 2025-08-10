@@ -9,7 +9,7 @@ export default function MainHeader() {
         {/* 왼쪽: 로고 */}
         <div className="nav-left">
           <Link to="/" className="logo" aria-label="홈으로 이동">
-            DORAGAZA
+            게시판로고
           </Link>
         </div>
 
