@@ -26,6 +26,7 @@ export default function MainHeader() {
           </NavLink>
         </nav>
       </div>
+      <hr/>
     </header>
   );
 }
